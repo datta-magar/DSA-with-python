@@ -32,6 +32,10 @@ class LinkedList:
                 fast_pointer = temp.next
             else:
                 fast_pointer = temp
+        # while(fast_pointer != None and fast_pointer.next != None):
+        #     slow_pointer = slow_pointer.next
+        #     fast_pointer = fast_pointer.next.next
+        # return slow_pointer
             
         return slow_pointer
 
