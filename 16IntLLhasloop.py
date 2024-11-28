@@ -94,3 +94,34 @@ print(my_linked_list_2.has_loop() ) # Returns False
     False
     
 """
+
+'''code with comments
+def has_loop(self):
+    # 1. Initialize two pointers: 'slow' and 'fast', 
+    # both starting from the head.
+    slow = self.head
+    fast = self.head
+ 
+    # 2. Continue traversal as long as the 'fast' pointer 
+    # and its next node aren't None.
+    # This ensures we don't run into errors trying to 
+    # access non-existent nodes.
+    while fast is not None and fast.next is not None:
+        
+        # 2.1. Move 'slow' pointer one step ahead.
+        slow = slow.next
+        
+        # 2.2. Move 'fast' pointer two steps ahead.
+        fast = fast.next.next
+        
+        # 2.3. Check for cycle: If 'slow' and 'fast' meet,
+        # it means there's a cycle in the linked list.
+        if slow == fast:
+            # 2.3.1. If they meet, return True 
+            # indicating the list has a loop.
+            return True
+ 
+    # 3. If we've gone through the entire list and 
+    # the pointers never met, then the list doesn't have a loop.
+    return False
+'''

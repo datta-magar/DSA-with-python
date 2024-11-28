@@ -77,3 +77,32 @@ print( my_linked_list.find_middle_node().value )
     3
     
 """
+
+'''code with coments
+def find_middle_node(self):
+    # 1. Initialize two pointers: 'slow' and 'fast', 
+    # both starting from the head.
+    slow = self.head
+    fast = self.head
+ 
+    # 2. Iterate as long as 'fast' pointer and its next 
+    # node are not None.
+    # This ensures we don't get an error trying to access
+    # a non-existent node.
+    while fast is not None and fast.next is not None:
+        
+        # 2.1. Move 'slow' one step ahead.
+        # This covers half the distance that 'fast' covers.
+        slow = slow.next
+        
+        # 2.2. Move 'fast' two steps ahead.
+        # Thus, when 'fast' reaches the end, 'slow' 
+        # will be at the middle.
+        fast = fast.next.next
+ 
+    # 3. By now, 'fast' has reached or surpassed the end, 
+    # and 'slow' is positioned at the middle node.
+    # Return the 'slow' pointer, which points to 
+    # the middle node.
+    return slow
+'''
