@@ -49,16 +49,22 @@ class LinkedList:
     def has_loop(self):
         slow = self.head
         fast = self.head
-        while 1:
-            if fast is not None:
-                fast = fast.next
-            if fast is not None:
-                fast = fast.next
-            if fast is None:
-                return False
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
             if slow == fast:
                 return True
-            slow = slow.next
+        return False
+        # while 1:
+        #     if fast is not None:
+        #         fast = fast.next
+        #     if fast is not None:
+        #         fast = fast.next
+        #     if fast is None:
+        #         return False
+        #     if slow == fast:
+        #         return True
+        #     slow = slow.next
     
     
     
