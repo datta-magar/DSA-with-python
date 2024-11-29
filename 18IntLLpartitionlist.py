@@ -169,19 +169,14 @@ class LinkedList:
         # while check:
         #     if (check.value < x and check != curr) or ((check.value == x or  check.value > x) and pre_check.value > check.value):
         #         if pre_curr == curr:
-        #             pre_check.next = None
         #             pre_check.next = check.next
-        #             check.next = None
         #             check.next = pre_check
         #             pre_curr = check
         #             check = pre_check.next
         #             self.head = pre_curr
         #         else:
-        #             pre_curr.next = None
         #             pre_curr.next = check
-        #             pre_check.next = None
         #             pre_check.next = check.next
-        #             check.next = None
         #             check.next = curr
         #             pre_curr = check
         #             check = pre_check.next
