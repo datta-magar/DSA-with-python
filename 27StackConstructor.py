@@ -1,3 +1,4 @@
+#Used singly linked list to do push pop operation in O(1) time complexity
 class Node:
     def __init__(self, value):
         self.value = value
