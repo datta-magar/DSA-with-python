@@ -1,4 +1,4 @@
-#Used singly linked list to do enqueue dequeue operation in O(1) time complexity
+#Used singly linked list to do enqueue dequeue operation in O(1) time complexity.
 class Node:
     def __init__(self, value):
         self.value = value
