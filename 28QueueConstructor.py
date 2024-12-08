@@ -17,22 +17,27 @@ class Queue:
             print(temp.value)
             temp = temp.next
 
-    def enqueue(self, value):
-        new_node = Node(value)
-        if self.length == 0:
-            self.first = new_node
-            self.last = new_node
-        else:
-            temp = self.last
-            temp.next = new_node
-            self.last = new_node
-        self.length += 1
-        return True
+        def enqueue(self, value):
+            new_node = Node(value)
+            if self.length == 0:
+                self.first = new_node
+                self.last = new_node
+            else:
+                # temp = self.last
+                # temp.next = new_node
+                # self.last = new_node
+                self.last.next = new_node
+                self.last = new_node
+            self.length += 1
+            return True
     
     def dequeue(self):
         if self.length == 0:
             return
         temp = self.first
+        if self.length == 1:
+            self.first = None
+            self.last = None
         self.first = self.first.next
         temp.next = None
         self.length -= 1
