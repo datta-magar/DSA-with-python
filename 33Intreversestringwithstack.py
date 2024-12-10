@@ -62,7 +62,7 @@ print ( reverse_string(my_string) )
     olleh
 
 """
-'''commected code
+'''commented code
 def reverse_string(string):
     # create a new stack
     stack = Stack() 
