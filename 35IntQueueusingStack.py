@@ -68,3 +68,4 @@ def enqueue(self, value):
     while len(self.stack2) > 0:
         self.stack1.append(self.stack2.pop())
 '''
+
